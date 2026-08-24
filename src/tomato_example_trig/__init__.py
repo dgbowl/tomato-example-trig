@@ -28,7 +28,7 @@ class Device(ModelDevice):
     def do_measure(self, **kwargs) -> None:
         uts = datetime.now(tz.utc).timestamp()
         offset = ((uts % 3600) / 10) * ((2 * math.pi) / 360)
-        abscissa = np.linspace(0, 1, self.points)
+        abscissa = np.linspace(0, 2 * math.pi, self.points)
         func = getattr(np, self.function)
         ordinate = func(abscissa + offset)
 
