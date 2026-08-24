@@ -1,12 +1,10 @@
 import time
 
-import pint
-import pytest
 from dgbowl_schemas.tomato.payload import Task
 
 from tomato_example_trig import DriverInterface
 
-kwargs = dict(address="a", channel="1")
+kwargs = {"address": "a", "channel": "1"}
 
 
 def test_create_device():
