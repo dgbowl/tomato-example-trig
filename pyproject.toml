@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools >= 61.0", "setuptools-git-versioning"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["version"]
+name = "tomato-example-trig"
+authors = [
+    {name = "Peter Kraus", email = "peter.kraus@tu-berlin.de"},
+]
+maintainers = [
+    {name = "Peter Kraus", email = "peter.kraus@tu-berlin.de"},
+]
+description = "tomato example trig driver"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+]
+requires-python = ">= 3.10"
+dependencies = [
+    "tomato >= 2.2, < 3.0a1",
+]
+
+[project.optional-dependencies]
+testing = ["pytest"]
+
+[project.urls]
+Documentation = "https://dgbowl.github.io/tomato-example-trig/main"
+Issues = "https://github.com/dgbowl/tomato-example-trig/issues"
+Repository = "https://github.com/dgbowl/tomato-example-trig/"
+
+[project.scripts]
+
+[tool.setuptools-git-versioning]
+enabled = true
+dev_template = "{tag}.post{ccount}"
+dirty_template = "{tag}.post{ccount}"
+
+[tool.ruff]
