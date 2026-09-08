@@ -1,5 +1,5 @@
 # tomato-example-trig
-An example driver for `tomato`, used for testing purposes.
+An example driver for `tomato`, used for testing purposes. In particular, this driver is used to check compatibility with the `tomato.driverinterface_2_1` module, and also to simulate drivers returning data with multiple coordinates (here: `uts` and `abscissa`).
 
 This driver is developed by the [ConCat lab at TU Berlin](https://tu.berlin/en/concat).
 
