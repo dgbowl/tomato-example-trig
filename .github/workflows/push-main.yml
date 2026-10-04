@@ -1,0 +1,16 @@
+name: push-main
+on:
+    push:
+        branches: ['main']
+jobs:
+    call-build:
+        uses: ./.github/workflows/workflow-build.yml
+        with:
+            pyver: '3.11'
+            os: 'ubuntu-latest'
+    call-test:
+        needs: [call-build]
+        uses: ./.github/workflows/workflow-test.yml
+        with:
+            pyver: '3.11'
+            os: 'ubuntu-latest'
